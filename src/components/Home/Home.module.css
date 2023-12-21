@@ -1,0 +1,220 @@
+:root {
+  --rich-black: rgba(0, 18, 25, 1);
+  --midnight-green: rgba(0, 95, 115, 1);
+  --dark-cyan: rgba(10, 147, 150, 1);
+  --tiffany-blue: rgba(148, 210, 189, 1);
+  --vanilla: rgba(233, 216, 166, 1);
+  --gamboge: rgba(238, 155, 0, 1);
+  --alloy-orange: rgba(202, 103, 2, 1);
+  --rust: rgba(187, 62, 3, 1);
+  --rufous: rgba(174, 32, 18, 1);
+  --auburn: rgba(155, 34, 38, 1);
+}
+
+.container {
+  /* ESTE ES EL MAIN */
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100vw;
+}
+
+.title {
+  height:100vh;
+  position: relative;
+  color: white;
+  line-height: 1.1;
+  padding-bottom:300px ;
+}
+
+.title video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+}
+
+.title div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to left,
+    var(--midnight-green),
+    var(--tiffany-blue)
+  );
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: show 3s linear 5s forwards;
+}
+
+.title h1 {
+  opacity:0;
+  background: #000;
+  border:#000 1px solid;
+  font-size: 10em;
+  text-align: center;
+  text-shadow: 2px 3px 6px  rgba(255, 255, 255, 1);
+  padding-top: 0.8em;
+  padding-right: 1.5em;
+  font-weight: 600;
+  mix-blend-mode: multiply;
+  animation: show 5s linear forwards;
+}
+
+.title h2 {
+  background: #000;
+  border:#000 1px solid;
+  text-shadow: 2px 3px 6px  rgba(255, 255, 255, 1);
+  min-width: 375px;
+  text-align: center;
+  font-size: 4em;
+  font-weight: 600;
+  mix-blend-mode: multiply;
+  animation: show 5s linear forwards;
+}
+
+.title h6 {
+  height: 100%;
+  text-align: center;
+  text-shadow: 2px 3px 6px  rgba(255, 255, 255, 1);
+  border:#000 1px solid;
+  padding-left: 4em;
+  background: black;
+  font-size: 2em;
+  font-weight: 600;
+  mix-blend-mode: multiply;
+  animation: show 5s linear forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (width < 550px) {
+    .title h1{
+        font-size: 7em;
+    }
+}
+
+/* ///////////////////////////////////// MY PROJECTS //////////////////////////////////////////////////////////// */
+
+.containerProjects {
+margin-top: 100px;
+width: 100%;
+height:100%;
+background-color: #000;
+padding:60px 25px;
+justify-content: center;
+align-content: center;
+}
+
+.containerProjects div h1 {
+    background-image:linear-gradient(
+      to left,
+      var(--midnight-green),
+      var(--tiffany-blue)
+    );
+    margin-bottom: 80px;
+    text-align: center;
+    font-size: 1.5vw;
+    font-weight: 600;
+    -webkit-text-fill-color: #0000;
+    background-clip: text;
+}
+
+.inmuebles360 {
+  display:grid;
+  width:100%;
+  max-width: 1450px;
+  margin:0 auto;
+  grid-template-columns: 1fr 3fr;
+  grid-column-gap: 10px;
+  background-color:rgba(0,0,0, 0.3)
+}
+
+.inmuebles360Images {
+  display: grid;
+  width:100%;
+  grid-template-columns: repeat(
+    auto-fill, minmax(300px, 1fr)
+  );
+  grid-auto-rows:300px;
+  grid-column-gap: 10px;
+  grid-row-gap:10px;
+}
+
+.inmuebles360Images div:first-child{
+  height:100%;
+  width:100%;
+  grid-row: 1/3 ;
+
+}
+
+.inmuebles360Images img {
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+}
+
+.inmuebles360Images img:nth-child(2) {
+  grid-column: span 2
+}
+
+.inmuebles360Description{
+  background-color: #000;
+  position:relative;
+}
+
+.inmuebles360Description h3 {
+  margin-top: 3em;
+  text-align:left;
+  color: #fff;
+  font-size:x-large;
+  font-weight: 600;
+}
+
+.inmuebles360Description p {
+  color:#ddd;
+  margin: 4em 1em 0 0 ;
+}
+
+.inmuebles360Description div{
+ margin-top: 3em;
+ margin-left: 10em;
+}
+
+.icons{
+  color:#fff;
+  margin:2em 10px;
+  width: 1.5em;
+  height: 1.5em;;
+}
+
+
+@media (width < 600px) {
+  .inmuebles360 {
+    grid-template-columns: 1fr;
+  }
+  .inmuebles360Images img:nth-child(2) {
+    grid-column: span 1
+  }
+
+}
+
+
+
