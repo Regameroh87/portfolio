@@ -63,6 +63,7 @@
   .inmuebles360Description {
     background-color: #000;
     position: relative;
+    
   }
   
   .inmuebles360Description h3 {
@@ -81,6 +82,7 @@
   .inmuebles360Description div {
     display: flex;
     justify-content: flex-end;
+    padding-right: 2em;
   }
   
   .icons {
