@@ -106,13 +106,19 @@
 }
 
 @media (width < 550px) {
+
+  .title {
+    margin:0 auto;
+  }
     .title h1{
         font-size: 7em;
     }
+    
+    .title h2{
+      font-size: 3em;
+  }
 
-    .title {
-      margin:0 auto;
-    }
+    
 }
 
 /* ///////////////////////////////////// MY PROJECTS //////////////////////////////////////////////////////////// */

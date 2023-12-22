@@ -9,7 +9,9 @@ export default function Home() {
   return (
     <main className={style.container}>
       <section className={style.title}>
-        <video autoPlay muted preload="auto" src="smoke.mp4"></video>
+        <video autoPlay muted preload="auto" >
+        <source src="smoke.mp4" type="video/mp4" />
+        </video>
         <div></div>
         <h1>{keys}Hello!</h1>
         <h2>I'm Rodrigo Gamero</h2>
