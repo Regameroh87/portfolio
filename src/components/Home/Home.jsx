@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className={style.container}>
       <section className={style.title}>
-        <video autoPlay muted preload="auto" >
+        <video autoPlay muted preload="auto" playsInline>
         <source src="smoke.mp4" type="video/mp4" />
         </video>
         <div></div>
