@@ -53,12 +53,12 @@ export default function Projects() {
           <div className={style.inmuebles360Images}>
             <div>
               <img
-                style={{ height: "50%", objectFit: "fill" }}
+                style={{ height: "50%", objectFit: "fill", borderRadius:"20px 20px 0 0" }}
                 src="./inmuebles360/home.png"
                 alt="Home"
               />
               <img
-                style={{ height: "50%", objectFit: "fill" }}
+                style={{ height: "50%", objectFit: "fill", borderRadius:"0 0 20px 20px" }}
                 src="./inmuebles360/properties.png"
                 alt="Home"
               />
