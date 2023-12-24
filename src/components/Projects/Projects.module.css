@@ -140,6 +140,7 @@
   @media (width < 550px) {
     .containerProjects div h1 {
       font-size: 3em;
+      height:300px
     }
   }
 
