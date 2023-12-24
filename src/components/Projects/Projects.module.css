@@ -13,7 +13,7 @@
   .containerProjects::before {
     content: " ";
     display: block;
-    background-image: linear-gradient(to left, #7B7B7B,#BDBDBD);
+    background-image: linear-gradient(to bottom, #7B7B7B,#BDBDBD);
     border-radius: 100%;
     position: absolute;
     width:30%;
@@ -41,7 +41,9 @@
 
   .containerProjects:hover .inmuebles360Images img,
   .containerProjects:hover .pokemonPiImages img {
-    filter: grayscale(10%);
+    filter: grayscale(50%);
+    box-shadow: 2px 3px 10px #000;
+
   }
 
   .containerProjects:hover h1 {
@@ -83,7 +85,7 @@
   .inmuebles360Images img, .pokemonPiImages img  {
     width: 100%;
     height: 100%;
-    filter:grayscale(90%);
+    filter:grayscale(100%);
     border-radius: 20px;
     object-fit: cover;
     transition: filter 0.6s ease;
