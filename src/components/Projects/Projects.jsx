@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink, faVideo } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { useEffect, useState } from "react";
+/* import { useEffect, useState } from "react"; */
 import style from "./Projects.module.css";
 
 export default function Projects() {
