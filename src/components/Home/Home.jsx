@@ -1,6 +1,6 @@
 import style from "../Home/Home.module.css";
 import Projects from "../Projects/Projects";
-import { useEffect } from "react";
+
 
 export default function Home() {
   const code = "/>";
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className={style.container}>
       <section className={style.title}>
-        <img src="smoke.gif"/>
+        <img src="smoke.gif" alt="smoke"/>
         <div></div>
         <h1>{keys}Hello!</h1>
         <h2>I'm Rodrigo Gamero</h2>
