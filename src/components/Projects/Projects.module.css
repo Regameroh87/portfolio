@@ -86,6 +86,7 @@
     to {
       scale:1;
       opacity:1;
+      transform: translateY(100px);
     }
   }
 
