@@ -10,8 +10,6 @@
     position: relative;
   }
   
-
-
   .containerProjects::before {
     content: " ";
     display: block;
@@ -38,12 +36,14 @@
   }
 
   .containerProjects:hover .inmuebles360Description,
-  .containerProjects:hover .pokemonPiDescription {
+  .containerProjects:hover .pokemonPiDescription, 
+  .containerProjects:hover .carouselCssDescription {
     color:black;
   }
 
   .containerProjects:hover .inmuebles360Images img,
-  .containerProjects:hover .pokemonPiImages img {
+  .containerProjects:hover .pokemonPiImages img,
+  .containerProjects:hover .carouselCssImages img {
     filter: grayscale(50%);
     box-shadow: 2px 3px 10px #000;
 
@@ -112,14 +112,14 @@
     grid-column: span 2;
   }
   
-  .inmuebles360Description, .pokemonPiDescription {
+  .inmuebles360Description, .pokemonPiDescription, .carouselCssDescription {
     position: relative;
     color: #fff;
     transition: color 1s linear 1s;
     
   }
   
-  .inmuebles360Description h3, .pokemonPiDescription h3 {
+  .inmuebles360Description h3, .pokemonPiDescription h3, .carouselCssDescription h3 {
     margin-top: 3em;
     text-align: left;
     font-size: x-large;
@@ -130,11 +130,11 @@
     margin-top: 1em;
   }
   
-  .inmuebles360Description p, .pokemonPiDescription p {
+  .inmuebles360Description p, .pokemonPiDescription p, .carouselCssDescription p {
     margin: 4em 1em 0 0;
   }
   
-  .inmuebles360Description div, .pokemonPiDescription div {
+  .inmuebles360Description div, .pokemonPiDescription div, .carouselCssDescription div {
     display: flex;
     justify-content: flex-end;
     padding-right: 2em;

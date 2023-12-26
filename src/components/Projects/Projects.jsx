@@ -5,10 +5,9 @@ import UseVisibility from "../Hooks/useVisibility";
 import style from "./Projects.module.css";
 
 export default function Projects() {
-
-const isInmueble360Visible = UseVisibility("inmuebles360");
-const isPokemonVisible = UseVisibility("pokemon");
-const isCarouselCssVisible = UseVisibility("carouselCss")
+  const isInmueble360Visible = UseVisibility("inmuebles360");
+  const isPokemonVisible = UseVisibility("pokemon");
+  const isCarouselCssVisible = UseVisibility("carouselCss");
 
   return (
     <div>
@@ -17,12 +16,12 @@ const isCarouselCssVisible = UseVisibility("carouselCss")
           <h1>SOME OF MY LATEST WORK</h1>
         </div>
 
-      
         <article
           id="inmuebles360"
-          className={`${style.inmuebles360} ${isInmueble360Visible ? style.showFinal : style.inmuebles360 }`}
-            >
-          
+          className={`${style.inmuebles360} ${
+            isInmueble360Visible ? style.showFinal : style.inmuebles360
+          }`}
+        >
           <div className={style.inmuebles360Description}>
             <h3>Inmuebles 360</h3>
             <p>
@@ -91,11 +90,13 @@ const isCarouselCssVisible = UseVisibility("carouselCss")
             />
           </div>
         </article>
-    
 
         <article
           id="pokemon"
-         className={`${style.pokemonPi} ${isPokemonVisible ? style.showFinal : style.pokemonPi}`}>
+          className={`${style.pokemonPi} ${
+            isPokemonVisible ? style.showFinal : style.pokemonPi
+          }`}
+        >
           <div className={style.pokemonPiDescription}>
             <h3>Project Pokemon</h3>
             <p>
@@ -131,26 +132,48 @@ const isCarouselCssVisible = UseVisibility("carouselCss")
 
           <div className={style.pokemonPiImages}>
             <img src="./pokemon-images/home.png" alt="home" />
-            <img src="./pokemon-images/form.png" alt="form"/>
-            <img src="./pokemon-images/detail.png" alt="detail"/>
-            <img src="./pokemon-images/modal.png" alt="modal"/>
-          </div>
-
-        </article>
-        
-        <article 
-        id="carouselCss"
-        className={`${style.carouselCss} ${isCarouselCssVisible ? style.showFinal : style.carouselCss }`}>
-
-          <div>
-            ACA VA LA DESCRIPCION
-          </div>
-
-          <div>
-              <img style={{borderRadius:"20px"}} src="./carruselCSS.gif" alt="carousel CSS"/>
+            <img src="./pokemon-images/form.png" alt="form" />
+            <img src="./pokemon-images/detail.png" alt="detail" />
+            <img src="./pokemon-images/modal.png" alt="modal" />
           </div>
         </article>
 
+        <article
+          id="carouselCss"
+          className={`${style.carouselCss} ${
+            isCarouselCssVisible ? style.showFinal : style.carouselCss
+          }`}
+        >
+          <div className={style.carouselCssDescription}>
+            <h3>Carousel CSS</h3>
+            <p>
+              "Exploring Creativity with Simplicity: A Simple Carousel, Crafted
+              with Love in CSS" <br></br> On my journey to strengthen my skills and foster
+              imagination, I embarked on designing a modest image carousel using
+              only CSS. Though it presents itself as a straightforward endeavor,
+              this project encapsulates my dedication to refining my technical
+              skills in the expansive realm of web technologies.
+            </p>
+            <p>technologies: HTML and CSS</p>
+            <div>
+              <a
+                href="https://github.com/Regameroh87/Inmuebles360"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faGithub} className={style.icons} />
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <img
+              style={{ borderRadius: "20px" }}
+              src="./carruselCSS.gif"
+              alt="carousel CSS"
+            />
+          </div>
+        </article>
       </section>
     </div>
   );
