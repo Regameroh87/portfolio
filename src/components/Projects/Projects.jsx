@@ -1,9 +1,39 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink, faVideo } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { useEffect, useState } from "react";
 import style from "./Projects.module.css";
 
 export default function Projects() {
+ const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const element = document.getElementById("inmuebles360");
+
+      if (element) {
+        const rect = element.getBoundingClientRect();
+
+        const viewportHeight =
+          window.innerHeight || document.documentElement.clientHeight; // obtengo la altura del viewport
+        const porcentajeVisible = Math.round(((viewportHeight - rect.top) / viewportHeight) * 100);
+        console.log("soy el porcentaje", porcentajeVisible);
+        if (porcentajeVisible > 30) {
+          setIsVisible(true)
+        } else {
+          setIsVisible(false)
+        }
+        
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div>
       <section className={style.containerProjects}>
@@ -11,7 +41,10 @@ export default function Projects() {
           <h1>SOME OF MY LATEST WORK</h1>
         </div>
 
-        <article className={style.inmuebles360}>
+        <article
+          id="inmuebles360"
+          
+          className={`${style.inmuebles360} ${isVisible ? style.inmuebles360Final : style.inmuebles360 }`}>
           <div className={style.inmuebles360Description}>
             <h3>Inmuebles 360</h3>
             <p>
@@ -53,12 +86,20 @@ export default function Projects() {
           <div className={style.inmuebles360Images}>
             <div>
               <img
-                style={{ height: "50%", objectFit: "fill", borderRadius:"20px 20px 0 0" }}
+                style={{
+                  height: "50%",
+                  objectFit: "fill",
+                  borderRadius: "20px 20px 0 0",
+                }}
                 src="./inmuebles360/home.png"
                 alt="Home"
               />
               <img
-                style={{ height: "50%", objectFit: "fill", borderRadius:"0 0 20px 20px" }}
+                style={{
+                  height: "50%",
+                  objectFit: "fill",
+                  borderRadius: "0 0 20px 20px",
+                }}
                 src="./inmuebles360/properties.png"
                 alt="Home"
               />
@@ -71,7 +112,6 @@ export default function Projects() {
               style={{ objectFit: "fill" }}
             />
           </div>
-
         </article>
 
         <article className={style.pokemonPi}>
@@ -110,13 +150,11 @@ export default function Projects() {
 
           <div className={style.pokemonPiImages}>
             <img src="./pokemon-images/home.png" />
-            <img src="./pokemon-images/form.png"/>
+            <img src="./pokemon-images/form.png" />
             <img src="./pokemon-images/detail.png" />
             <img src="./pokemon-images/modal.png" />
           </div>
-
         </article>
-
       </section>
     </div>
   );

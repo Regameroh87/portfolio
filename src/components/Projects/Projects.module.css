@@ -25,6 +25,7 @@
     opacity:0;
     z-index: -1;
     transition: all 0.5s ease-in;
+    transition-delay: 1s;
   }
 
   .containerProjects:hover::before {
@@ -55,28 +56,29 @@
   .containerProjects div h1 {
     color:var(--dark-cyan);
     margin-bottom: 80px;
-    opacity: 0;
     text-align: center;
     font-size: 2vw;
     font-weight: 600;
-    transition: all 0.6s ease;
-    animation: aparecer linear both;
-    animation-timeline: view();
-    animation-range: entry 20% cover 30%; 
+    transition: color 1s linear 1s;
   }
   
   .inmuebles360, .pokemonPi {
     display: grid;
     width: 100%;
-    opacity: 0;
     max-width: 1450px;
     justify-content: center;
     margin: 0 auto;
     grid-template-columns: 1fr 3fr;
     grid-column-gap: 10px;
-    animation: aparecer linear both;
-    animation-timeline: view();
-    animation-range: entry 20% cover 30%; 
+    opacity: 0.1;
+    transform: scale(0.5);
+    transition: all 2s ease-in-out;
+  }
+
+  .inmuebles360Final {
+    opacity:1;
+    transform: scale(1);
+
   }
 
   .pokemonPi {
@@ -99,6 +101,7 @@
     border-radius: 20px;
     object-fit: cover;
     transition: filter 0.6s ease;
+    transition-delay: 1s;
   }
   
   .inmuebles360Images div:first-child {
@@ -113,6 +116,7 @@
   .inmuebles360Description, .pokemonPiDescription {
     position: relative;
     color: #fff;
+    transition: color 1s linear 1s;
     
   }
   
@@ -149,18 +153,15 @@
 
   @keyframes aparecer {
     from {
-      opacity:0;
-      scale:.5;
-      translate: (0, 100px);
+      opacity: 0;
+      transform: scale(0.5) translateY(100px); 
     }
-    
-  to {
-    opacity:1;
-    scale:1;
-    translate:(0, 0)
+  
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
   }
-}
-
 
   @media (width < 550px) {
     .containerProjects div h1 {
