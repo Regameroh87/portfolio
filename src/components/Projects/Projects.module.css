@@ -75,18 +75,19 @@
     transition: all 2s ease-in-out; */
     animation: appear linear both;
     animation-timeline: view();
-    animation-range: 20% entry 30% cover;
+    animation-range: entry 20% cover 30%;
   }
 
   @keyframes appear {
     from {
       scale: .5;
       opacity:0;
+      transform: translateY(100px);
     }
     to {
       scale:1;
       opacity:1;
-      transform: translateY(100px);
+      transform: translateY(0);
     }
   }
 

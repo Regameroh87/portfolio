@@ -5,34 +5,34 @@ import { useEffect, useState } from "react";
 import style from "./Projects.module.css";
 
 export default function Projects() {
- const [isVisible, setIsVisible] = useState(false)
+//  const [isVisible, setIsVisible] = useState(false)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const element = document.getElementById("inmuebles360");
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       const element = document.getElementById("inmuebles360");
 
-      if (element) {
-        const rect = element.getBoundingClientRect();
+//       if (element) {
+//         const rect = element.getBoundingClientRect();
 
-        const viewportHeight =
-          window.innerHeight || document.documentElement.clientHeight; // obtengo la altura del viewport
-        const porcentajeVisible = Math.round(((viewportHeight - rect.top) / viewportHeight) * 100);
-        console.log("soy el porcentaje", porcentajeVisible);
-        if (porcentajeVisible > 30) {
-          setIsVisible(true)
-        } else {
-          setIsVisible(false)
-        }
+//         const viewportHeight =
+//           window.innerHeight || document.documentElement.clientHeight; // obtengo la altura del viewport
+//         const porcentajeVisible = Math.round(((viewportHeight - rect.top) / viewportHeight) * 100);
+//         console.log("soy el porcentaje", porcentajeVisible);
+//         if (porcentajeVisible > 30) {
+//           setIsVisible(true)
+//         } else {
+//           setIsVisible(false)
+//         }
         
-      }
-    };
+//       }
+//     };
 
-    window.addEventListener("scroll", handleScroll);
+//     window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+//     return () => {
+//       window.removeEventListener("scroll", handleScroll);
+//     };
+//   }, []);
 
   return (
     <div>
