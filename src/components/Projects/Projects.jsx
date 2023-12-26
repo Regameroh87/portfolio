@@ -150,10 +150,10 @@ export default function Projects() {
           </div>
 
           <div className={style.pokemonPiImages}>
-            <img src="./pokemon-images/home.png" />
-            <img src="./pokemon-images/form.png" />
-            <img src="./pokemon-images/detail.png" />
-            <img src="./pokemon-images/modal.png" />
+            <img src="./pokemon-images/home.png" alt="home" />
+            <img src="./pokemon-images/form.png" alt="form"/>
+            <img src="./pokemon-images/detail.png" alt="detail"/>
+            <img src="./pokemon-images/modal.png" alt="modal"/>
           </div>
         </article>
       </section>
