@@ -43,8 +43,9 @@ export default function Projects() {
 
         <article
           id="inmuebles360"
-          
-          className={`${style.inmuebles360} ${isVisible ? style.inmuebles360Final : style.inmuebles360 }`}>
+          className={style.inmuebles360}
+            >
+            {/* className={`${style.inmuebles360} ${isVisible ? style.inmuebles360Final : style.inmuebles360 }`} */}
           <div className={style.inmuebles360Description}>
             <h3>Inmuebles 360</h3>
             <p>
