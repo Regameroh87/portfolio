@@ -1,38 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink, faVideo } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-/* import { useEffect, useState } from "react"; */
+import UseVisibility from "../Hooks/useVisibility";
 import style from "./Projects.module.css";
 
 export default function Projects() {
-//  const [isVisible, setIsVisible] = useState(false)
 
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       const element = document.getElementById("inmuebles360");
-
-//       if (element) {
-//         const rect = element.getBoundingClientRect();
-
-//         const viewportHeight =
-//           window.innerHeight || document.documentElement.clientHeight; // obtengo la altura del viewport
-//         const porcentajeVisible = Math.round(((viewportHeight - rect.top) / viewportHeight) * 100);
-//         console.log("soy el porcentaje", porcentajeVisible);
-//         if (porcentajeVisible > 30) {
-//           setIsVisible(true)
-//         } else {
-//           setIsVisible(false)
-//         }
-        
-//       }
-//     };
-
-//     window.addEventListener("scroll", handleScroll);
-
-//     return () => {
-//       window.removeEventListener("scroll", handleScroll);
-//     };
-//   }, []);
+const isInmueble360Visible = UseVisibility("inmuebles360");
+const isPokemonVisible = UseVisibility("pokemon");
+const isCarouselCssVisible = UseVisibility("carouselCss")
 
   return (
     <div>
@@ -41,11 +17,12 @@ export default function Projects() {
           <h1>SOME OF MY LATEST WORK</h1>
         </div>
 
+      
         <article
           id="inmuebles360"
-          className={style.inmuebles360}
+          className={`${style.inmuebles360} ${isInmueble360Visible ? style.showFinal : style.inmuebles360 }`}
             >
-            {/* className={`${style.inmuebles360} ${isVisible ? style.inmuebles360Final : style.inmuebles360 }`} */}
+          
           <div className={style.inmuebles360Description}>
             <h3>Inmuebles 360</h3>
             <p>
@@ -114,8 +91,11 @@ export default function Projects() {
             />
           </div>
         </article>
+    
 
-        <article className={style.pokemonPi}>
+        <article
+          id="pokemon"
+         className={`${style.pokemonPi} ${isPokemonVisible ? style.showFinal : style.pokemonPi}`}>
           <div className={style.pokemonPiDescription}>
             <h3>Project Pokemon</h3>
             <p>
@@ -155,7 +135,22 @@ export default function Projects() {
             <img src="./pokemon-images/detail.png" alt="detail"/>
             <img src="./pokemon-images/modal.png" alt="modal"/>
           </div>
+
         </article>
+        
+        <article 
+        id="carouselCss"
+        className={`${style.carouselCss} ${isCarouselCssVisible ? style.showFinal : style.carouselCss }`}>
+
+          <div>
+            ACA VA LA DESCRIPCION
+          </div>
+
+          <div>
+              <img style={{borderRadius:"20px"}} src="./carruselCSS.gif" alt="carousel CSS"/>
+          </div>
+        </article>
+
       </section>
     </div>
   );

@@ -59,10 +59,10 @@
     text-align: center;
     font-size: 2vw;
     font-weight: 600;
-    transition: color 1s linear 1s;
+    transition: color 1s linear 1s,
   }
   
-  .inmuebles360, .pokemonPi {
+  .inmuebles360, .pokemonPi, .carouselCss {
     display: grid;
     width: 100%;
     max-width: 1450px;
@@ -70,36 +70,19 @@
     margin: 0 auto;
     grid-template-columns: 1fr 3fr;
     grid-column-gap: 10px;
-/*     opacity: 0.1;
+    opacity: 0.1;
     transform: scale(0.5);
-    transition: all 2s ease-in-out; */
-    animation: appear linear both;
-    animation-timeline: view();
-    animation-range: entry 20% cover 30%;
-  }
-
-  @keyframes appear {
-    from {
-      scale: .5;
-      opacity:0;
-      transform: translateY(100px);
-    }
-    to {
-      scale:1;
-      opacity:1;
-      transform: translateY(0);
-    }
-  }
-
-  .inmuebles360Final {
-    opacity:1;
-    transform: scale(1);
-
+    transition: all 2s ease-in-out;
   }
 
   .pokemonPi {
     margin:300px auto;
   }
+
+  .showFinal {
+    opacity:1;
+    transform: scale(1);
+  } 
   
   .inmuebles360Images, .pokemonPiImages {
     display: grid;
@@ -190,7 +173,7 @@
   }
 
   @media (width < 1300px) {
-    .inmuebles360, .pokemonPi {
+    .inmuebles360, .pokemonPi, .carouselCss {
       grid-template-columns: 1fr;
     }
     .inmuebles360Images img:nth-child(2), 
