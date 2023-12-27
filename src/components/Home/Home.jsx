@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <main className={style.container}>
-      <section className={style.title}>
+      <section id="home" className={style.title}>
         <img src="smoke.gif" alt="smoke"/>
         <div></div>
         <h1>{keys}Hello!</h1>

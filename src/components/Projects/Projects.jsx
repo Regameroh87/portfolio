@@ -81,7 +81,11 @@ export default function Projects() {
                 alt="Home"
               />
             </div>
-            <img src="./inmuebles360/detail.png" alt="Detail" />
+            <img
+              style={{ objectFit: "fill" }}
+              src="./inmuebles360/detail.png"
+              alt="Detail"
+            />
             <img src="./inmuebles360/login.png" alt="Login" />
             <img
               src="./inmuebles360/admin.png"
@@ -148,11 +152,12 @@ export default function Projects() {
             <h3>Carousel CSS</h3>
             <p>
               "Exploring Creativity with Simplicity: A Simple Carousel, Crafted
-              with Love in CSS" <br></br> On my journey to strengthen my skills and foster
-              imagination, I embarked on designing a modest image carousel using
-              only CSS. Though it presents itself as a straightforward endeavor,
-              this project encapsulates my dedication to refining my technical
-              skills in the expansive realm of web technologies.
+              with Love in CSS" <br></br> On my journey to strengthen my skills
+              and foster imagination, I embarked on designing a modest image
+              carousel using only CSS. Though it presents itself as a
+              straightforward endeavor, this project encapsulates my dedication
+              to refining my technical skills in the expansive realm of web
+              technologies.
             </p>
             <p>technologies: HTML and CSS</p>
             <div>

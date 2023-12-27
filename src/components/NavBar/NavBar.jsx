@@ -33,7 +33,7 @@ export default function NavBar() {
   
         <div className=" flex items-center justify-center flex-1 gap-x-3">
 
-          <button href=""className ="px-3 py-3 mt-3 transition duration-500 ease-in-out hover:text-gray-600 md:px-10 ">Home</button>
+          <a href="#home" className ="px-3 py-3 mt-3 transition duration-500 ease-in-out hover:text-gray-600 md:px-10 ">Home</a>
           <button href="" className="px-3 py-3 mt-3 transition duration-500 ease-in-out hover:text-gray-600 md:px-10 ">About</button>
           <button href="" className="px-3 py-3 mt-3 transition duration-500 ease-in-out hover:text-gray-600 md:px-10 ">Skills</button>
           <button href="" className="px-3 py-3 mt-3 transition duration-500 ease-in-out hover:text-gray-600 md:px-10 ">Contact</button>
@@ -45,7 +45,7 @@ export default function NavBar() {
 
          {/* ///////////////////////MENU/////////////////////////// */}
           {visibleMenu && (
-            <div className=" flex flex-1 flex-nowrap ml-5 mt-3"> 
+            <div className=" flex flex-1 flex-nowrap ml-9 mt-3"> 
             <FontAwesomeIcon className="hover:text-gray-600 cursor-pointer" icon={faBars} onClick={handleMenu} size="xl"/>
             </div>
           )}
