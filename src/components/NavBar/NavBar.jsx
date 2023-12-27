@@ -29,7 +29,7 @@ export default function NavBar() {
   }
 
   return (
-    <div className="flex fixed flex-row bg-black text-white items-center justify-between h-auto w-screen mx-auto z-10 opacity-70 backdrop-blur-md ">
+    <div className="flex fixed flex-row bg-black text-white items-center justify-between h-auto w-screen mx-auto z-10 opacity-80">
   
         <div className=" flex items-center justify-center flex-1 gap-x-3">
 
@@ -46,12 +46,12 @@ export default function NavBar() {
          {/* ///////////////////////MENU/////////////////////////// */}
           {visibleMenu && (
             <div className=" flex flex-1 flex-nowrap ml-5 mt-3"> 
-            <FontAwesomeIcon className="hover:text-gray-600" icon={faBars} onClick={handleMenu} size="xl"/>
+            <FontAwesomeIcon className="hover:text-gray-600 cursor-pointer" icon={faBars} onClick={handleMenu} size="xl"/>
             </div>
           )}
           {openMenu && (
-          <div className=" flex flex-col bg-black justify-center items-center w-screen h-screen fixed top-0 left-0 z-10 opacity-95 backdrop-blur-md">
-            <button onClick={handleMenu}>X</button>
+          <div className=" flex flex-col bg-black justify-center items-center w-screen h-screen fixed top-0 right-0 z-10">
+            <button className="absolute top-0 right-0 p-4 mr-11 text-xl" onClick={handleMenu}>X</button>
          <a
             href="https://github.com/Regameroh87"
             target="_blank"

@@ -22,8 +22,8 @@
     left:35%;
     opacity:0;
     z-index: -1;
-    transition: all 0.5s ease-in;
-    transition-delay: 1s;
+    transition: all 1s ease-in;
+
   }
 
   .containerProjects:hover::before {
@@ -59,7 +59,7 @@
     text-align: center;
     font-size: 2vw;
     font-weight: 600;
-    transition: color 1s linear 1s,
+    transition: color 1s linear ,
   }
   
   .inmuebles360, .pokemonPi, .carouselCss {
@@ -100,7 +100,7 @@
     border-radius: 20px;
     object-fit: cover;
     transition: filter 0.6s ease;
-    transition-delay: 1s;
+    
   }
   
   .inmuebles360Images div:first-child {
