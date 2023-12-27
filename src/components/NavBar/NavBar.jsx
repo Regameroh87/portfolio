@@ -45,7 +45,7 @@ export default function NavBar() {
 
          {/* ///////////////////////MENU/////////////////////////// */}
           {visibleMenu && (
-            <div className=" flex flex-1 flex-nowrap ml-3 mt-3"> 
+            <div className=" flex flex-1 flex-nowrap ml-5 mt-3"> 
             <FontAwesomeIcon className="hover:text-gray-600" icon={faBars} onClick={handleMenu} size="xl"/>
             </div>
           )}
