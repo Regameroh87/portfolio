@@ -171,9 +171,8 @@ export default function Projects() {
             </div>
           </div>
 
-          <div>
+          <div style={{display:"flex", justifyContent:"center"}}>
             <img
-              style={{ borderRadius: "20px" }}
               src="./carruselCSS.gif"
               alt="carousel CSS"
             />
