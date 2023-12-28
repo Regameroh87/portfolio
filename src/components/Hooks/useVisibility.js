@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 
 const UseVisibility = (elementId, threshold = 20) => {
-    const [isVisible, setIsVisible] = useState(false);
-  // console.log("soy id", elementId)
+
+  const [isVisible, setIsVisible] = useState(false);
+
 
   useEffect(() => {
     const handleScroll = () => {

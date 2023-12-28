@@ -136,7 +136,7 @@ export default function Projects() {
 
           <div className={style.pokemonPiImages}>
             <img src="./pokemon-images/home.png" alt="home" />
-            <img src="./pokemon-images/form.png" alt="form" />
+            <img src="./pokemon-images/loading.png" alt="loading" />
             <img src="./pokemon-images/detail.png" alt="detail" />
             <img src="./pokemon-images/modal.png" alt="modal" />
           </div>
