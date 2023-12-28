@@ -10,7 +10,7 @@ export default function Projects() {
   const isCarouselCssVisible = UseVisibility("carouselCss");
 
   return (
-    <div>
+ 
       <section className={style.containerProjects}>
         <div>
           <h1>SOME OF MY LATEST WORK</h1>
@@ -179,6 +179,6 @@ export default function Projects() {
           </div>
         </article>
       </section>
-    </div>
+ 
   );
 }
