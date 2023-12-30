@@ -10,7 +10,7 @@ export default function About() {
             TEXTO HABLO SOBRE
           </div>
           <div>
-            <img src="Rodrigo.jpg" alt="" />
+            <img src="Rodrigo.jpg" alt="Rodrigo" />
           </div>
         </div>
       </article>

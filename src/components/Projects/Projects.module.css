@@ -87,7 +87,7 @@
   .inmuebles360Images, .pokemonPiImages {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     grid-auto-rows: 300px;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
