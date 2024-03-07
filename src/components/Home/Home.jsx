@@ -11,10 +11,10 @@ export default function Home() {
       <section id="home" className={style.title}>
         <img src="smoke.gif" alt="smoke" />
         <div></div>
-        <h1>{keys}Hello!</h1>
-        <h2>I'm Rodrigo Gamero</h2>
+        <h1>{keys}Hola!</h1>
+        <h2>Soy Rodrigo Gamero</h2>
         <h6>
-          I'am Fullstack Developer <strong>{code}</strong>
+            Desarrollador Fullstack <strong>{code}</strong>
         </h6>
       </section>
       <Projects />

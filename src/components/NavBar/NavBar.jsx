@@ -12,7 +12,7 @@ import { useState, useEffect } from "react";
 export default function NavBar() {
   const [openMenu, setOpenMenu] = useState(false);
   const [visibleMenu, setVisibleMenu] = useState(window.innerWidth < 550);
-  console.log("soy visible menu",visibleMenu)
+  // console.log("soy visible menu",visibleMenu)
 
   useEffect(() => {
     const handleResize = () => {
@@ -34,9 +34,9 @@ export default function NavBar() {
         <div className=" flex items-center justify-center flex-1 gap-x-3">
 
           <a href="#home" className ="px-3 py-3 mt-3 transition duration-500 ease-in-out hover:text-gray-600 md:px-10 ">Home</a>
-          <button href="" className="px-3 py-3 mt-3 transition duration-500 ease-in-out hover:text-gray-600 md:px-10 ">About</button>
-          <button href="" className="px-3 py-3 mt-3 transition duration-500 ease-in-out hover:text-gray-600 md:px-10 ">Skills</button>
-          <button href="" className="px-3 py-3 mt-3 transition duration-500 ease-in-out hover:text-gray-600 md:px-10 ">Contact</button>
+          <a href="#aboutme" className="px-3 py-3 mt-3 transition duration-500 ease-in-out hover:text-gray-600 whitespace-nowrap md:px-10 ">Sobre mí</a>
+          <button href="" className="px-3 py-3 mt-3 transition duration-500 ease-in-out hover:text-gray-600 md:px-10 ">Habilidades</button>
+          <button href="" className="px-3 py-3 mt-3 transition duration-500 ease-in-out hover:text-gray-600 md:px-10 ">Contacto</button>
 
         </div>
 
